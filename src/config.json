@@ -1,8 +1,0 @@
-{
-  "routes": [
-    {
-      "route": "/agents",
-      "address": "http://localhost:3001"
-    }
-  ]
-}
