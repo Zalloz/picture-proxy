@@ -12,7 +12,6 @@ app.use(express.static(path.join(__dirname, '../client')));
 app.use(bodyParser.urlencoded({extended: true})) 
 app.use(bodyParser.json())
 
-
 for (route of routes) {
   app.use(route.route,
     proxy({
@@ -23,6 +22,5 @@ for (route of routes) {
     })
   );
 }
-
 
 module.exports = app;
