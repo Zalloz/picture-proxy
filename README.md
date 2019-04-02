@@ -1,3 +1,3 @@
 This is Jen's Proxy Server
 
-[ ] See Trello for Todos!
+[√] See Trello for Todos!
