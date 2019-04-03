@@ -1,0 +1,33 @@
+/* .container {
+  position: relative;
+  justify-content: center;
+  align-content: center;
+} */
+
+#form-service {
+  position: absolute;
+  top: 450px;
+  left: 700px;
+  z-index: 1;
+  background: white;
+}
+
+#similar-homes {
+  position: relative;
+  top: 1400px;
+  left: 50px;
+}
+
+#picture-service {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+#general-description-service {
+  position: relative;
+  top: 170px;
+  left: 25px;
+  z-index: 0;
+  background: white;
+}
