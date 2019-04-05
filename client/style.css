@@ -18,16 +18,16 @@
   left: 50px;
 }
 
-#picture-service {
+#photos {
   position: absolute;
   top: 50px;
   left: 50px;
 }
 
-#general-description-service {
+#gendesc {
   position: relative;
-  top: 170px;
-  left: 25px;
+  top: 220px;
+  left: 55px;
   z-index: 0;
   background: white;
 }
