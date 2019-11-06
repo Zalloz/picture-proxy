@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const path = require('path')
 const cors = require('cors')
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 80;
 const axios = require('axios');
 
 const app = express()
@@ -12,9 +12,9 @@ app.use(bodyParser.json())
 app.use(cors())
 app.use(express.static(path.join(__dirname, '../client')));
 app.get("/", (req, res) => {
-  axios.get('http://localhost:8082')
+  axios.get('http://ec2-3-133-91-213.us-east-2.compute.amazonaws.com')
     .then(reactString => {
-      axios.get('http://localhost:8081')
+      axios.get('http://ec2-3-17-68-94.us-east-2.compute.amazonaws.com')
         .then(formString => {
           const html =
             `<!DOCTYPE html>
