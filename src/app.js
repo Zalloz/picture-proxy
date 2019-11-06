@@ -1,9 +1,12 @@
-const express = require('express')
+// const express = require('express')
+const http = require('http');
+const fs = require('fs');
 const bodyParser = require('body-parser')
 const path = require('path')
+const publicDirectory = path.join(__dirname, '../client')
 // const cors = require('cors')
 const port = process.env.PORT || 80;
-// const axios = require('axios');
+const axios = require('axios');
 
 // const app = express()
 
