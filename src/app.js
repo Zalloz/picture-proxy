@@ -10,6 +10,9 @@ const app = express()
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 app.use(cors())
+app.get("/loaderio-3d2f0a07b3c6870f81ad0adf47c9b060", (req, res) => {
+  res.end("loaderio-3d2f0a07b3c6870f81ad0adf47c9b060")
+})
 app.use(express.static(path.join(__dirname, '../client')));
 app.get("/", (req, res) => {
   axios.get('http://ec2-3-133-91-213.us-east-2.compute.amazonaws.com')
