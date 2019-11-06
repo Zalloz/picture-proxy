@@ -14,9 +14,10 @@ app.use(express.static(path.join(__dirname, '../client')));
 app.get("/", (req, res) => {
   axios.get('http://localhost:8082')
     .then(reactString => {
-      console.log(reactString)
-      const html =
-        `<!DOCTYPE html>
+      axios.get('http://localhost:8081')
+        .then(formString => {
+          const html =
+            `<!DOCTYPE html>
       <html lang="en">
       <head>
       <meta charset="UTF-8">
@@ -28,18 +29,20 @@ app.get("/", (req, res) => {
         <link rel="stylesheet" type="text/css" media="screen and (min-width:700px)" href="http://localhost:8080/defaultStyle.css">
         <link rel="stylesheet" type="text/css" media="screen and (man-width: 480px) and (max-width:1250px)" href="http://localhost:8080/sizeDownOne.css">
         <link rel="stylesheet" type="text/css" media="screen and (man-width: 480px) and (max-width:1250px)" href="http://localhost:8082/style.css">
-        <!-- <link rel="stylesheet" type="text/css" media="screen and (man-width: 480px) and (max-width:1250px)" href="http://localhost:8081/style.css"> -->
+        <link rel="stylesheet" type="text/css" media="screen and (man-width: 480px) and (max-width:1250px)" href="http://localhost:8081/style.css">
       </head>
       <body>
         <div class="container">
           <div id="photos">${reactString.data}</div>
           <div id="gendesc"></div>
-          <div id="form-service"></div>
+          <div id="form-service">${formString.data}</div>
           <div id="similar-homes"></div>
         </div>
       </body>
-  </html>`
-      res.send(html);
+      </html>`
+          res.send(html);
+        })
+
     })
 })
 
