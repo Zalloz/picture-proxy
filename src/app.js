@@ -19,7 +19,7 @@ http.createServer(function (req, res) {
         contentType = 'text/css'
         hostJsOrCss()
       } else {
-        Promise.all([axios.get('http://ec2-3-133-91-213.us-east-2.compute.amazonaws.com'), axios.get('http://ec2-3-17-68-94.us-east-2.compute.amazonaws.com/')])
+        Promise.all([axios.get('http://ec2-18-188-236-37.us-east-2.compute.amazonaws.com/'), axios.get('http://ec2-3-132-213-138.us-east-2.compute.amazonaws.com/')])
           .then(reactHtmlStrings => {
             res.writeHead(200, {
               'Content-Type': contentType,
