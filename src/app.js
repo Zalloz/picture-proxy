@@ -9,6 +9,10 @@ const axios = require('axios');
 
 http.createServer(function (req, res) {
   if (req.method === 'GET') {
+    if (req.url === `/loaderio-3d2f0a07b3c6870f81ad0adf47c9b060/`) {
+      res.end('loaderio-3d2f0a07b3c6870f81ad0adf47c9b060', 'utf-8')
+      return
+    }
     if (req.url === '/') {
       let contentType = 'text/html';
       let extension = path.extname(req.url)
@@ -63,12 +67,6 @@ http.createServer(function (req, res) {
           return
         })
       }
-    } else if (req.url === `/loaderio-3d2f0a07b3c6870f81ad0adf47c9b060/`) {
-      let verifyPath = path.join(__dirname, `loaderio-3d2f0a07b3c6870f81ad0adf47c9b060/`)
-      fs.readFile(verifyPath, (err, verifyFile) => {
-        res.end('loaderio-3d2f0a07b3c6870f81ad0adf47c9b060', 'utf-8')
-        return
-      })
     }
   } else {
     res.write('Error!');
