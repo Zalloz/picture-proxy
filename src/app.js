@@ -10,7 +10,7 @@ const axios = require('axios');
 http.createServer(function (req, res) {
   if (req.method === 'GET') {
     console.log(req.url)
-    if (req.url === `/loaderio-3d2f0a07b3c6870f81ad0adf47c9b060/`) {
+    if (req.url === `/loaderio-3d2f0a07b3c6870f81ad0adf47c9b060`) {
       res.end('loaderio-3d2f0a07b3c6870f81ad0adf47c9b060', 'utf-8')
       return
     }
