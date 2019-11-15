@@ -13,6 +13,10 @@ http.createServer(function (req, res) {
       res.end('loaderio-7ebc1865e4b6a8a85930f454fed87f9f', 'utf-8')
       return
     }
+    if (req.url === `/loaderio-507e6ed0c4eb236bbf56eb51b7be316a/`) {
+      res.end('loaderio-507e6ed0c4eb236bbf56eb51b7be316a', 'utf-8')
+      return
+    }
     if (req.url === '/') {
       let contentType = 'text/html';
       let extension = path.extname(req.url)
